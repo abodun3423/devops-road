@@ -18,6 +18,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    max-width: 850px;
+    width: 90%;
 }
 
 .status-dot {
@@ -47,19 +49,37 @@ body {
     text-transform: uppercase;
 }
 
-h1 {
-    font-size: 3.5rem;
+.profile h1 {
+    font-size: 3rem;
     font-weight: 800;
-    margin-bottom: 15px;
     background: linear-gradient(90deg, #00ff88, #00cfff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
 }
 
-p {
-    font-size: 1.2rem;
-    color: rgba(255,255,255,0.6);
-    margin-bottom: 40px;
+.profile .title {
+    font-size: 1.1rem;
+    color: #00cfff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.headline {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #00ff88;
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 35px;
+    text-align: left;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8;
+}
+
+.headline strong {
+    color: #00cfff;
 }
 
 .info-grid {
@@ -67,6 +87,7 @@ p {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .info-card {
@@ -91,9 +112,15 @@ p {
 }
 
 .message {
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 1.1rem;
     color: #00ff88;
     font-style: italic;
 }
 
+.footer {
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 1px;
+}
