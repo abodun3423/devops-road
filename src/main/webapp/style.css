@@ -1,0 +1,320 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a1a;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 26, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+    z-index: 1000;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+}
+
+.nav-brand span {
+    color: #00ff88;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00ff88;
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0a0a1a, #16213e, #0f3460);
+    padding-top: 80px;
+}
+
+.container {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    background: #00ff88;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.6); }
+    70%  { box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+}
+
+.status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: #00ff88;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00ff88, #00cfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 1.2rem;
+    color: #00cfff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #00ff88, #00cfff);
+    color: #0a0a1a;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover { transform: scale(1.05); }
+
+.btn-secondary {
+    border: 2px solid #00ff88;
+    color: #00ff88;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #00ff88;
+    color: #0a0a1a;
+}
+
+/* Sections */
+.section {
+    padding: 80px 20px;
+}
+
+.alt-section {
+    background: rgba(255,255,255,0.02);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(90deg, #00ff88, #00cfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* About */
+.about-card {
+    background: rgba(255,255,255,0.05);
+    border-left: 4px solid #00ff88;
+    border-radius: 12px;
+    padding: 30px;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.75);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-card p { margin-bottom: 15px; }
+.about-card strong { color: #00cfff; }
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.skill-icon { font-size: 2rem; margin-bottom: 10px; }
+
+.skill-name {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    height: 6px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #00ff88, #00cfff);
+    border-radius: 10px;
+}
+
+/* Info Grid */
+.info-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background: rgba(255,255,255,0.07);
+    border-radius: 12px;
+    padding: 20px 25px;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    min-width: 150px;
+}
+
+.info-card .label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 8px;
+}
+
+.info-card .value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #00cfff;
+}
+
+/* Contact */
+.contact-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 30px 40px;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.contact-card:hover { transform: translateY(-5px); }
+
+.contact-icon { font-size: 2.5rem; margin-bottom: 10px; }
+
+.contact-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 8px;
+}
+
+.contact-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #00cfff;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0,0,0,0.3);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(0,255,136,0.1);
+}
+
+.message {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #00ff88;
+    font-style: italic;
+}
