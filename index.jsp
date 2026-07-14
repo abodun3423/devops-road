@@ -1,4 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,7 @@
     <nav class="navbar">
         <div class="nav-brand">AI<span>DevOps</span></div>
         <ul class="nav-links">
-            <li><a href="index.jsp" class="active">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="skills.html">Skills</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -83,7 +82,7 @@
                 </div>
                 <div class="info-card">
                     <div class="label">Deployed At</div>
-                    <div class="value"><%= new java.util.Date() %></div>
+                    <div class="value" id="deployment-date">Loading date...</div>
                 </div>
             </div>
         </div>
@@ -94,6 +93,11 @@
         <p>© 2026 Abiodun Isaac — Building the future, one pipeline at a time. 🚀</p>
     </footer>
 
+    <!-- JavaScript to handle dynamic date safely on Vercel -->
+    <script>
+        document.getElementById('deployment-date').innerText = new Date().toLocaleString();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
+
